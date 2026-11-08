@@ -1,0 +1,24 @@
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-placeholder {
+    border: none;
+    border-radius: 2px;
+    resize: none;
+    margin: 20px;
+}
+
+.search-btn {
+    font-size: small;
+    border: none;
+    border-color: none;
+    background-color:darksalmon;
+    border-radius: 2px;
+}
+
+.search-btn:hover {
+    background-color:gold;
+}

@@ -1,5 +1,5 @@
-import "./BorrowerLogin.css";
-import LoginButton from "./components/LoginButton.jsx";
+import './BorrowerLogin.module.css';
+import LoginButton from './components/LoginButton.jsx';
 
 function BorrowerLogin() {
   return (

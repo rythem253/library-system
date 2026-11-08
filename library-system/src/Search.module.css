@@ -1,0 +1,21 @@
+.filter-container {
+    display: flex;
+    align-items: center;
+}
+
+.filter-lbl {
+    font-size: small;
+    font-family: sans-serif;
+    margin: 20px;
+}
+
+.genre-select {
+    font-size: small;
+    font-family: inherit;
+    padding: 1px;
+    border: 1px solid #d9d4c5;
+    border-radius: 2px;
+    background-color: #fff;
+    width: 10%;
+    height: 8%;
+}

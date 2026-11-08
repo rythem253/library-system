@@ -1,8 +1,7 @@
 .layout {
-  border: 3px solid red;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  background-color: rgb(231, 220, 196);
+  background-color: #EFEBE0;
 }
 
 .form-login {

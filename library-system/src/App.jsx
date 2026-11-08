@@ -1,10 +1,18 @@
 import BorrowerLogin from './BorrowerLogin.jsx'
-import './App.css'
+import Home from './Home.jsx'
+import Search from './Search.jsx';
+import BorrowerAccount from './BorrowerAccount.jsx';
+import './App.css';
+
+
 
 function App() {
   return (
     <div>
-      <BorrowerLogin />
+      {/* <BorrowerLogin /> */}
+      {/* <Home/> */}
+      {/* <Search/> */}
+      <BorrowerAccount/>
     </div>
   )
 }

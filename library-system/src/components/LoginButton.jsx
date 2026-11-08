@@ -1,7 +1,8 @@
+import styles from './LoginButton.module.css';
 
 function LoginButton() {
     return (
-        <button className="login-button"> Login </button>
+        <button className={styles['login-btn']}> Login </button>
     );
 }
 

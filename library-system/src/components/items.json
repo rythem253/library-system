@@ -1,0 +1,167 @@
+[
+    {
+        "ItemID": "I001",
+        "ItemTypeID": "BOOK",
+        "Title": "Dune",
+        "Author": "Frank Herbert",
+        "Description": "A science fiction novel about politics, religion, and survival on the desert planet Arrakis.",
+        "ISBN": "9780441013593",
+        "Price": 18.99,
+        "CoverURL": "/covers/dune.jpg",
+        "Status": "available"
+    },
+    {
+        "ItemID": "I002",
+        "ItemTypeID": "BOOK",
+        "Title": "Gone Girl",
+        "Author": "Gillian Flynn",
+        "Description": "A psychological thriller about a marriage and a wife's disappearance.",
+        "ISBN": "9780307588371",
+        "Price": 16.5,
+        "CoverURL": "/covers/gone-girl.jpg",
+        "Status": "borrowed"
+    },
+    {
+        "ItemID": "I003",
+        "ItemTypeID": "BOOK",
+        "Title": "The Hobbit",
+        "Author": "J.R.R. Tolkien",
+        "Description": "A fantasy adventure following Bilbo Baggins on a quest to reclaim a dwarf kingdom.",
+        "ISBN": "9780547928227",
+        "Price": 14.99,
+        "CoverURL": "/covers/the-hobbit.jpg",
+        "Status": "available"
+    },
+    {
+        "ItemID": "I004",
+        "ItemTypeID": "BOOK",
+        "Title": "Educated",
+        "Author": "Tara Westover",
+        "Description": "A memoir about growing up in a survivalist family and pursuing education.",
+        "ISBN": "9780399590504",
+        "Price": 17.0,
+        "CoverURL": "/covers/educated.jpg",
+        "Status": "reserved"
+    },
+    {
+        "ItemID": "I005",
+        "ItemTypeID": "BOOK",
+        "Title": "Clean Code",
+        "Author": "Robert C. Martin",
+        "Description": "A handbook of practices for writing readable and maintainable software.",
+        "ISBN": "9780132350884",
+        "Price": 44.99,
+        "CoverURL": "/covers/clean-code.jpg",
+        "Status": "available"
+    },
+    {
+        "ItemID": "I006",
+        "ItemTypeID": "JOURNAL",
+        "Title": "Communications of the ACM, Vol. 68 No. 3",
+        "Author": "Association for Computing Machinery",
+        "Description": "Monthly journal covering computing research, practice, and policy.",
+        "ISBN": null,
+        "Price": 12.0,
+        "CoverURL": "/covers/cacm-68-3.jpg",
+        "Status": "available"
+    },
+    {
+        "ItemID": "I007",
+        "ItemTypeID": "JOURNAL",
+        "Title": "Nature, Issue 8012",
+        "Author": "Nature Publishing Group",
+        "Description": "Weekly international journal of science.",
+        "ISBN": null,
+        "Price": 15.0,
+        "CoverURL": "/covers/nature-8012.jpg",
+        "Status": "borrowed"
+    },
+    {
+        "ItemID": "I008",
+        "ItemTypeID": "JOURNAL",
+        "Title": "IEEE Software, Jan/Feb Issue",
+        "Author": "IEEE Computer Society",
+        "Description": "Bimonthly magazine on software engineering practice.",
+        "ISBN": null,
+        "Price": 10.0,
+        "CoverURL": "/covers/ieee-software.jpg",
+        "Status": "available"
+    },
+    {
+        "ItemID": "I009",
+        "ItemTypeID": "RESEARCH_PAPER",
+        "Title": "Attention Is All You Need",
+        "Author": "Ashish Vaswani et al.",
+        "Description": "Introduces the Transformer architecture for sequence modelling.",
+        "ISBN": null,
+        "Price": 0.0,
+        "CoverURL": "/covers/attention-paper.jpg",
+        "Status": "available"
+    },
+    {
+        "ItemID": "I010",
+        "ItemTypeID": "RESEARCH_PAPER",
+        "Title": "A Relational Model of Data for Large Shared Data Banks",
+        "Author": "E. F. Codd",
+        "Description": "The foundational paper proposing the relational model for databases.",
+        "ISBN": null,
+        "Price": 0.0,
+        "CoverURL": "/covers/codd-paper.jpg",
+        "Status": "available"
+    },
+    {
+        "ItemID": "I011",
+        "ItemTypeID": "RESEARCH_PAPER",
+        "Title": "Late-Life Migration and Information and Communication Technology",
+        "Author": "Lei et al.",
+        "Description": "A CHI 2024 study of how ICT supports older adults who migrate late in life.",
+        "ISBN": null,
+        "Price": 0.0,
+        "CoverURL": "/covers/lei-chi24.jpg",
+        "Status": "reserved"
+    },
+    {
+        "ItemID": "I012",
+        "ItemTypeID": "ELECTRONIC_DEVICE",
+        "Title": "Dell Latitude 5440 Laptop",
+        "Author": null,
+        "Description": "14-inch laptop with 16 GB RAM and 512 GB SSD, available for short-term loan.",
+        "ISBN": null,
+        "Price": 1299.0,
+        "CoverURL": "/covers/dell-latitude.jpg",
+        "Status": "available"
+    },
+    {
+        "ItemID": "I013",
+        "ItemTypeID": "ELECTRONIC_DEVICE",
+        "Title": "iPad Air 11-inch",
+        "Author": null,
+        "Description": "Tablet with Wi-Fi, 128 GB storage, and a protective case.",
+        "ISBN": null,
+        "Price": 749.0,
+        "CoverURL": "/covers/ipad-air.jpg",
+        "Status": "borrowed"
+    },
+    {
+        "ItemID": "I014",
+        "ItemTypeID": "ELECTRONIC_DEVICE",
+        "Title": "Canon EOS R50 Camera Kit",
+        "Author": null,
+        "Description": "Mirrorless camera with kit lens, battery, charger, and SD card.",
+        "ISBN": null,
+        "Price": 899.0,
+        "CoverURL": "/covers/canon-r50.jpg",
+        "Status": "available"
+    },
+    {
+        "ItemID": "I015",
+        "ItemTypeID": "ELECTRONIC_DEVICE",
+        "Title": "Raspberry Pi 5 Starter Kit",
+        "Author": null,
+        "Description": "Single-board computer with power supply, case, and microSD card.",
+        "ISBN": null,
+        "Price": 129.0,
+        "CoverURL": "/covers/raspberry-pi-5.jpg",
+        "Status": "maintenance"
+    }
+]
