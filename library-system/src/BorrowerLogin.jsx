@@ -1,7 +1,16 @@
 import './BorrowerLogin.module.css';
+import { useNavigate } from 'react-router-dom';
 import LoginButton from './components/LoginButton.jsx';
 
 function BorrowerLogin() {
+
+  const navigate = useNavigate();
+
+  const handleLogin = () => {
+        // clear login state here (e.g. set isLoggedIn to false, remove stored token)
+        navigate('/');
+    };
+
   return (
     <div className="layout">
       <h1>Login</h1>
@@ -17,12 +26,10 @@ function BorrowerLogin() {
       </div>
 
       <div className="form-login">
-        <LoginButton />
+        <LoginButton onClick={handleLogin} />
       </div>
 
     </div>
-
-
   );
 }
 

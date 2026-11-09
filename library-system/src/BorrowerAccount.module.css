@@ -1,0 +1,52 @@
+.user-info {
+    display: flex;
+    flex-direction: column;
+    max-width: 480px;
+    margin: 60px auto;
+    padding: 24px 32px;
+    background-color: #fbfaf6;
+    border: 1px solid hsl(43, 24%, 85%);
+    border-radius: 14px;
+    box-shadow: 0 6px 20px rgba(43, 51, 38, 0.15);
+}
+
+.user-info h1 {
+    font-size: 1.5rem;
+    color: #2b3326;
+    border-bottom: 1px solid #e2ddd0;
+}
+
+.text-design {
+    margin: 8px 0;
+    font-size: 1rem;
+    color: #4a5244;
+    flex: 1;
+}
+
+
+
+.flex-direction {
+    display: flex;
+    align-items: center;
+}
+
+.button {
+    width: auto;
+    padding: 10px;
+    background-color: #38452f;
+    color: #ffffff;
+    font-size: .8rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 20px;
+    
+}
+
+
+.button:hover {
+    background-color: #2c3625;
+}
+
+
