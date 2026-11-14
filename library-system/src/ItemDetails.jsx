@@ -23,38 +23,42 @@ function ItemDetails() {
     }
 
     return (
-        <div>
+        <div className={styles["page"]}>
             <BorrowerNavbar />
-            <h1 className={styles["page-title"]}>Item Details</h1>
 
-            <div className={styles["details"]}>
-                <div className={styles["cover"]}>
-                    {item.Cover ? (
-                        <img src={item.Cover} alt={item.Title} />
-                    ) : (
-                        <p>No cover</p>
-                    )}
-                </div>
+            <div className={styles["content"]}>
+                <h1 className={styles["page-title"]}>Item Details</h1>
 
-                <div className={styles["right"]}>
-                    <div className={styles["info-box"]}>
-                        <p>Book Title: {item.Title}</p>
-                        <p>Author: {item.Author}</p>
-                        <p>Publisher: {item.Publisher}</p>
-                        <p>Genre: {item.Genre}</p>
-                        <p>
-                            Availability: {item.AvailableCopies}/{item.TotalCopies} Copies Available
-                        </p>
-                        <p className={styles["description"]}>
-                            Description: {item.Description}
-                        </p>
+                <div className={styles["details"]}>
+                    <div className={styles["cover"]}>
+                           {item.cover_id && (
+                                <img
+                                    src={`https://covers.openlibrary.org/b/id/${item.cover_id}-M.jpg`}
+                                    alt={item.Title}
+                                />
+                            )}
                     </div>
-                    <button className={styles["checkout-btn"]} onClick={handleCheckout}>
-                        Checkout
-                    </button>
+
+                    <div className={styles["right"]}>
+                        <div className={styles["info-box"]}>
+                            <p>Book Title: {item.Title}</p>
+                            <p>Author: {item.Author}</p>
+                            <p>Publisher: {item.Publisher}</p>
+                            <p>Genre: {item.Genre}</p>
+                            <p>
+                                Availability: {item.AvailableCopies}/{item.TotalCopies} Copies Available
+                            </p>
+                            <p className={styles["description"]}>
+                                Description: {item.Description}
+                            </p>
+                        </div>
+                        <button className={styles["checkout-btn"]} onClick={handleCheckout}>
+                            Checkout
+                        </button>
+                    </div>
                 </div>
             </div>
-            <Footer/>
+            <Footer />
         </div>
     );
 }

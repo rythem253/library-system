@@ -3,8 +3,6 @@
     margin: 1rem 2rem;
 }
 
-
-
 .details {
     display: flex;
     gap: 1.5rem;
@@ -57,4 +55,14 @@
     padding: 0.6rem 1.2rem;
     cursor: pointer;
     width: 100px;
+}
+
+.page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    flex: 1;
 }

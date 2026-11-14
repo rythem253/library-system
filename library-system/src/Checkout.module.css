@@ -2,7 +2,7 @@
     background-color: white;
     border-radius: 10px;
     margin: 50px auto;
-    width: 70%;
+    width: 40%;
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
@@ -13,10 +13,18 @@
 }
 
 
+.page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    flex: 1;
+}
 
 .cover {
     grid-column: 1;
-    border: 1px solid black;
     border-radius: 10px;
     margin: 20px;
 }

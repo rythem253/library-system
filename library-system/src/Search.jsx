@@ -20,14 +20,14 @@ function Search() {
 
     //Filter Data;
     const results = Items.filter((item) =>
-    item.Title.toLowerCase().includes(query.toLowerCase()) &&
-    (genre === '' || item.Genre === genre) &&
-    (author === '' || item.Author === author) &&
-    (type === '' || item.ItemTypeID === type)
-);
+        item.Title.toLowerCase().includes(query.toLowerCase()) &&
+        (genre === '' || item.Genre === genre) &&
+        (author === '' || item.Author === author) &&
+        (type === '' || item.ItemTypeID === type)
+    );
 
     return (
-       <div>
+        <div>
             <BorrowerNavbar />
             <div>
                 <SearchBar query={query} setQuery={setQuery} />
@@ -80,7 +80,7 @@ function Search() {
                         <option value="RESEARCH_PAPER">Research Paper</option>
                         <option value="ELECTRONIC_DEVICE">Electronic Device</option>
                     </select>
-                    
+
                 </div>
                 <div>
                 </div>
@@ -91,7 +91,12 @@ function Search() {
                 {results.map((item) => (
                     <section key={item.ItemID} className={styles['book-card']}>
                         <section className={styles['book-cover']}>
-                            <p>Cover</p>
+                            {item.cover_id && (
+                                <img
+                                    src={`https://covers.openlibrary.org/b/id/${item.cover_id}-M.jpg`}
+                                    alt={item.Title}
+                                />
+                            )}
                         </section>
                         <div className={styles['book-placement']}>
                             <p className={styles['book-title']}>{item.Title}</p>
@@ -101,10 +106,10 @@ function Search() {
                             <SelectButton onClick={() => navigate("/item-details", { state: { item } })} />
                         </div>
                     </section>
-                    
+
                 ))}
             </div>
-            <Footer/>
+            <Footer />
         </div>
     );
 }

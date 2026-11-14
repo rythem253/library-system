@@ -7,7 +7,7 @@
         "Description": "A science fiction novel about politics, religion, and survival on the desert planet Arrakis.",
         "ISBN": "9780441013593",
         "Price": 18.99,
-        "CoverURL": "/covers/dune.jpg",
+        "cover_id": "11481354",
         "Status": "available"
     },
     {
@@ -18,7 +18,7 @@
         "Description": "A psychological thriller about a marriage and a wife's disappearance.",
         "ISBN": "9780307588371",
         "Price": 16.5,
-        "CoverURL": "/covers/gone-girl.jpg",
+        "cover_id": "8368314",
         "Status": "borrowed"
     },
     {
@@ -29,7 +29,7 @@
         "Description": "A fantasy adventure following Bilbo Baggins on a quest to reclaim a dwarf kingdom.",
         "ISBN": "9780547928227",
         "Price": 14.99,
-        "CoverURL": "/covers/the-hobbit.jpg",
+        "cover_id": "14627509",
         "Status": "available"
     },
     {
@@ -40,7 +40,7 @@
         "Description": "A memoir about growing up in a survivalist family and pursuing education.",
         "ISBN": "9780399590504",
         "Price": 17.0,
-        "CoverURL": "/covers/educated.jpg",
+        "cover_id": "8314077",
         "Status": "reserved"
     },
     {
@@ -51,7 +51,7 @@
         "Description": "A handbook of practices for writing readable and maintainable software.",
         "ISBN": "9780132350884",
         "Price": 44.99,
-        "CoverURL": "/covers/clean-code.jpg",
+        "cover_id": "8065615",
         "Status": "available"
     },
     {
@@ -62,7 +62,7 @@
         "Description": "Monthly journal covering computing research, practice, and policy.",
         "ISBN": null,
         "Price": 12.0,
-        "CoverURL": "/covers/cacm-68-3.jpg",
+        "cover_id": "5436245",
         "Status": "available"
     },
     {
@@ -73,7 +73,7 @@
         "Description": "Weekly international journal of science.",
         "ISBN": null,
         "Price": 15.0,
-        "CoverURL": "/covers/nature-8012.jpg",
+        "cover_id": "/covers/nature-8012.jpg",
         "Status": "borrowed"
     },
     {
@@ -84,7 +84,7 @@
         "Description": "Bimonthly magazine on software engineering practice.",
         "ISBN": null,
         "Price": 10.0,
-        "CoverURL": "/covers/ieee-software.jpg",
+        "cover_id": "4970437",
         "Status": "available"
     },
     {
@@ -95,7 +95,7 @@
         "Description": "Introduces the Transformer architecture for sequence modelling.",
         "ISBN": null,
         "Price": 0.0,
-        "CoverURL": "/covers/attention-paper.jpg",
+        "cover_id": "/covers/attention-paper.jpg",
         "Status": "available"
     },
     {
@@ -106,7 +106,7 @@
         "Description": "The foundational paper proposing the relational model for databases.",
         "ISBN": null,
         "Price": 0.0,
-        "CoverURL": "/covers/codd-paper.jpg",
+        "cover_id": "/covers/codd-paper.jpg",
         "Status": "available"
     },
     {
@@ -117,7 +117,7 @@
         "Description": "A CHI 2024 study of how ICT supports older adults who migrate late in life.",
         "ISBN": null,
         "Price": 0.0,
-        "CoverURL": "/covers/lei-chi24.jpg",
+        "cover_id": "/covers/lei-chi24.jpg",
         "Status": "reserved"
     },
     {
@@ -128,7 +128,7 @@
         "Description": "14-inch laptop with 16 GB RAM and 512 GB SSD, available for short-term loan.",
         "ISBN": null,
         "Price": 1299.0,
-        "CoverURL": "/covers/dell-latitude.jpg",
+        "cover_id": "/covers/dell-latitude.jpg",
         "Status": "available"
     },
     {
@@ -139,7 +139,7 @@
         "Description": "Tablet with Wi-Fi, 128 GB storage, and a protective case.",
         "ISBN": null,
         "Price": 749.0,
-        "CoverURL": "/covers/ipad-air.jpg",
+        "cover_id": "/covers/ipad-air.jpg",
         "Status": "borrowed"
     },
     {
@@ -150,7 +150,7 @@
         "Description": "Mirrorless camera with kit lens, battery, charger, and SD card.",
         "ISBN": null,
         "Price": 899.0,
-        "CoverURL": "/covers/canon-r50.jpg",
+        "cover_id": "/covers/canon-r50.jpg",
         "Status": "available"
     },
     {
@@ -161,7 +161,7 @@
         "Description": "Single-board computer with power supply, case, and microSD card.",
         "ISBN": null,
         "Price": 129.0,
-        "CoverURL": "/covers/raspberry-pi-5.jpg",
+        "cover_id": "/covers/raspberry-pi-5.jpg",
         "Status": "maintenance"
     },
     {
@@ -172,7 +172,7 @@
         "Description": "A psychological thriller about a marriage and a wife's disappearance.",
         "ISBN": "9780307588347",
         "Price": 16.5,
-        "CoverURL": "/covers/harry-potter.jpg",
+        "cover_id": "/covers/harry-potter.jpg",
         "Status": "borrowed"
     }
 ]
