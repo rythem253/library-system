@@ -1,24 +1,36 @@
+import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import styles from './BorrowerNavbar.module.css';
+import logo from '../covers/logo.jpg';
 
 function BorrowerNavbar() {
     const navigate = useNavigate();
+    const [menuOpen, setMenuOpen] = useState(false);
 
     const handleLogout = () => {
         // clear login state here (e.g. set isLoggedIn to false, remove stored token)
+        setMenuOpen(false);
         navigate('/login');
     };
 
-    return (
-        <nav className={styles.navbar}>
-            <div className={styles.logo}>
-                {/* Add Logo */}
-            </div>
+    const closeMenu = () => setMenuOpen(false);
 
-            <ul className={styles['nav-links']}>
-                <li className={styles['nav-ind-link']}><Link to="/">Home</Link></li>
-                <li className={styles['nav-ind-link']}><Link to="/search">Borrow & Search</Link></li>
-                <li className={styles['nav-ind-link']}><Link to="/account">Account</Link></li>
+    return (
+        <nav className={styles['navbar']}>
+            <img className={styles['logo']} src={logo} alt="Library logo" />
+
+            <button
+                className={styles['menu-btn']}
+                onClick={() => setMenuOpen(!menuOpen)}
+                aria-expanded={menuOpen}
+            >
+                Menu
+            </button>
+
+            <ul className={`${styles['nav-links']} ${menuOpen ? styles['open'] : ''}`}>
+                <li className={styles['nav-ind-link']}><Link to="/" onClick={closeMenu}>Home</Link></li>
+                <li className={styles['nav-ind-link']}><Link to="/search" onClick={closeMenu}>Borrow & Search</Link></li>
+                <li className={styles['nav-ind-link']}><Link to="/account" onClick={closeMenu}>Account</Link></li>
                 <button className={styles['logout-btn']} onClick={handleLogout}>Logout</button>
             </ul>
         </nav>

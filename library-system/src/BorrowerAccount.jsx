@@ -1,6 +1,8 @@
 import BorrowerNavbar from "./components/BorrowerNavbar.jsx";
 import styles from "./BorrowerAccount.module.css";
 import Footer from "./components/Footer.jsx";
+import Items from './components/items.json';
+
 
 // Placeholder data until the backend is connected
 const user = {
@@ -10,8 +12,8 @@ const user = {
 };
 
 const checkedOut = [
-    { id: 1, title: "The Golden Key", due: "YYYY/MM/DD" },
-    { id: 2, title: "The Alchemist", due: "YYYY/MM/DD" },
+    { id: 1, title: "The Golden Key", due: "2026/12/24" },
+    { id: 2, title: "The Alchemist", due: "2026/12/28" },
 ];
 
 const fines = [];

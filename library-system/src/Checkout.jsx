@@ -35,6 +35,7 @@ function Checkout() {
                     </section>
                     <button className={styles["button"]}>Checkout</button>
                     <button className={styles["button-cancel"]} onClick={handleCancel}>Cancel</button>
+                    <div className={styles["late-fee"]}>Late returns are subject to a fee</div>
                 </div>
             </div>
             <Footer />

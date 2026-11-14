@@ -8,7 +8,8 @@
         "ISBN": "9780441013593",
         "Price": 18.99,
         "cover_id": "11481354",
-        "Status": "available"
+        "Status": "available",
+        "Genre": "science-fiction"
     },
     {
         "ItemID": "I002",
@@ -19,7 +20,8 @@
         "ISBN": "9780307588371",
         "Price": 16.5,
         "cover_id": "8368314",
-        "Status": "borrowed"
+        "Status": "borrowed",
+        "Genre": "mystery"
     },
     {
         "ItemID": "I003",
@@ -30,7 +32,8 @@
         "ISBN": "9780547928227",
         "Price": 14.99,
         "cover_id": "14627509",
-        "Status": "available"
+        "Status": "available",
+        "Genre": "fantasy"
     },
     {
         "ItemID": "I004",
@@ -41,7 +44,8 @@
         "ISBN": "9780399590504",
         "Price": 17.0,
         "cover_id": "8314077",
-        "Status": "reserved"
+        "Status": "reserved",
+        "Genre": "non-fiction"
     },
     {
         "ItemID": "I005",
@@ -52,7 +56,8 @@
         "ISBN": "9780132350884",
         "Price": 44.99,
         "cover_id": "8065615",
-        "Status": "available"
+        "Status": "available",
+        "Genre": "technology"
     },
     {
         "ItemID": "I006",
@@ -63,7 +68,8 @@
         "ISBN": null,
         "Price": 12.0,
         "cover_id": "5436245",
-        "Status": "available"
+        "Status": "available",
+        "Genre": "technology"
     },
     {
         "ItemID": "I007",
@@ -74,7 +80,8 @@
         "ISBN": null,
         "Price": 15.0,
         "cover_id": "/covers/nature-8012.jpg",
-        "Status": "borrowed"
+        "Status": "borrowed",
+        "Genre": "non-fiction"
     },
     {
         "ItemID": "I008",
@@ -85,7 +92,8 @@
         "ISBN": null,
         "Price": 10.0,
         "cover_id": "4970437",
-        "Status": "available"
+        "Status": "available",
+        "Genre": "technology"
     },
     {
         "ItemID": "I009",
@@ -95,8 +103,9 @@
         "Description": "Introduces the Transformer architecture for sequence modelling.",
         "ISBN": null,
         "Price": 0.0,
-        "cover_id": "/covers/attention-paper.jpg",
-        "Status": "available"
+        "cover_id": "/covers/laptop.jpg",
+        "Status": "available",
+        "Genre": "technology"
     },
     {
         "ItemID": "I010",
@@ -106,8 +115,9 @@
         "Description": "The foundational paper proposing the relational model for databases.",
         "ISBN": null,
         "Price": 0.0,
-        "cover_id": "/covers/codd-paper.jpg",
-        "Status": "available"
+        "cover_id": "/covers/laptop.jpg",
+        "Status": "available",
+        "Genre": "technology"
     },
     {
         "ItemID": "I011",
@@ -117,8 +127,9 @@
         "Description": "A CHI 2024 study of how ICT supports older adults who migrate late in life.",
         "ISBN": null,
         "Price": 0.0,
-        "cover_id": "/covers/lei-chi24.jpg",
-        "Status": "reserved"
+        "cover_id": "/covers/laptop.jpg",
+        "Status": "reserved",
+        "Genre": "non-fiction"
     },
     {
         "ItemID": "I012",
@@ -128,8 +139,9 @@
         "Description": "14-inch laptop with 16 GB RAM and 512 GB SSD, available for short-term loan.",
         "ISBN": null,
         "Price": 1299.0,
-        "cover_id": "/covers/dell-latitude.jpg",
-        "Status": "available"
+        "cover_id": "/covers/laptop.jpg",
+        "Status": "available",
+        "Genre": "technology"
     },
     {
         "ItemID": "I013",
@@ -139,8 +151,9 @@
         "Description": "Tablet with Wi-Fi, 128 GB storage, and a protective case.",
         "ISBN": null,
         "Price": 749.0,
-        "cover_id": "/covers/ipad-air.jpg",
-        "Status": "borrowed"
+        "cover_id": "/covers/laptop.jpg",
+        "Status": "borrowed",
+        "Genre": "technology"
     },
     {
         "ItemID": "I014",
@@ -150,8 +163,9 @@
         "Description": "Mirrorless camera with kit lens, battery, charger, and SD card.",
         "ISBN": null,
         "Price": 899.0,
-        "cover_id": "/covers/canon-r50.jpg",
-        "Status": "available"
+        "cover_id": "/covers/laptop.jpg",
+        "Status": "available",
+        "Genre": "technology"
     },
     {
         "ItemID": "I015",
@@ -161,8 +175,9 @@
         "Description": "Single-board computer with power supply, case, and microSD card.",
         "ISBN": null,
         "Price": 129.0,
-        "cover_id": "/covers/raspberry-pi-5.jpg",
-        "Status": "maintenance"
+        "cover_id": "/covers/laptop.jpg",
+        "Status": "maintenance",
+        "Genre": "technology"
     },
     {
         "ItemID": "I0016",
@@ -172,7 +187,18 @@
         "Description": "A psychological thriller about a marriage and a wife's disappearance.",
         "ISBN": "9780307588347",
         "Price": 16.5,
-        "cover_id": "/covers/harry-potter.jpg",
-        "Status": "borrowed"
+        "cover_id": "15155833",
+        "Status": "borrowed",
+        "Genre": "fantasy"
+    },
+
+    {
+        "userID": "100",
+        "Name": "John",
+        "Surname": "Ross",
+        "Email": "john.ross@mail.com",
+        "Phone": "145-8855-785",
+        "Fines": "None",
+        "Wishlist": "None"
     }
 ]

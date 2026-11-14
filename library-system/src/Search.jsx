@@ -19,8 +19,10 @@ function Search() {
     const [query, setQuery] = useState('');
 
     //Filter Data;
+    const q = String(query ?? '').toLowerCase();
+
     const results = Items.filter((item) =>
-        item.Title.toLowerCase().includes(query.toLowerCase()) &&
+        String(item.Title ?? '').toLowerCase().includes(q) &&
         (genre === '' || item.Genre === genre) &&
         (author === '' || item.Author === author) &&
         (type === '' || item.ItemTypeID === type)

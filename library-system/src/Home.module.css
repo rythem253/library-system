@@ -7,29 +7,37 @@
     gap: 1rem;
 }
 
-
 .book-item {
     display: flex;
+    flex-direction: row;         
     align-items: center;
     gap: 1rem;
     border: 2px solid black;
-    background-color:white ;
+    background-color: white;
     padding: 10px;
     border-radius: 4px;
-    width: 600px;
+    width: 100%;                  
+    max-width: 600px;           
+    box-sizing: border-box;       
 }
-
 
 .book-item img {
     width: auto;
     height: auto;
+    max-width: 100%;
     border-radius: 10px;
     padding: 5px;
+    flex-shrink: 0;
+}
+
+.book-info {
+    min-width: 0;                 
 }
 
 .book-info p {
     margin: 0;
     font-size: larger;
+    overflow-wrap: anywhere;
 }
 
 .book-title {
@@ -38,4 +46,28 @@
 
 .trending-heading {
     margin: 20px;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .trending-heading {
+        margin: 12px;
+    }
+
+    .trending-heading h1 {
+        font-size: 1.5rem;
+    }
+
+    .trending-books {
+        margin: 12px;
+    }
+
+    .book-item img {
+        width: 80px;              
+        padding: 0;
+    }
+
+    .book-info p {
+        font-size: 1rem;
+    }
 }

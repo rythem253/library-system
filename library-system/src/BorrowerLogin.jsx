@@ -1,18 +1,20 @@
 import styles from './BorrowerLogin.module.css';
 import { useNavigate } from 'react-router-dom';
 import LoginButton from './components/LoginButton.jsx';
-
+import logo from './covers/logo.jpg';
 function BorrowerLogin() {
 
   const navigate = useNavigate();
 
   const handleLogin = () => {
-        navigate('/');
-    };
+    navigate('/');
+  };
 
   return (
     <div className={styles.layout}>
-      <h1>Login</h1>
+      <img className={styles.logo} src={logo} alt="Library logo" />
+      <h1 className={styles.title}>Login</h1>
+
 
       <div className={styles['form-login']}>
         <label className={styles['label-field']}>Username:</label>

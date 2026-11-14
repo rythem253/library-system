@@ -70,3 +70,8 @@
 .button-cancel:active {
     background-color: #222b1c;
 }
+
+.late-fee {
+    margin: 20px;
+    font-weight: bold;
+}
