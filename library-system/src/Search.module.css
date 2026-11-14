@@ -3,11 +3,13 @@
     align-items: center;
 }
 
+
 .filter-lbl {
     font-size: small;
     font-family: sans-serif;
     margin: 20px;
 }
+
 
 .genre-select {
     font-size: small;
@@ -18,4 +20,42 @@
     background-color: #fff;
     width: 10%;
     height: 8%;
+}
+
+.book-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: 0.1px solid black;
+    width: 600px;
+    height: 350px;
+    margin: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(43, 51, 38, 0.15);
+}
+
+.book-title {
+    font-size: medium;
+    margin: 20px 20px;
+}
+
+.book-placement {
+    grid-column: 2;
+}
+
+.book-cover {
+    grid-column: 1;
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 250px;
+    height: 300px;
+    margin: auto auto;
+}
+
+.book-cover p {
+    margin: 100px 100px;
+}
+
+#temp-image {
+    border: 1px solid black;
 }

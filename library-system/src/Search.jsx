@@ -2,17 +2,35 @@ import { useState } from 'react';
 import BorrowerNavbar from './components/BorrowerNavbar.jsx';
 import SearchBar from './components/SearchBar.jsx';
 import styles from './Search.module.css';
+import SelectButton from './components/SelectButton.jsx';
+import { useNavigate } from 'react-router-dom';
+import Footer from "./components/Footer.jsx";
+
+import Items from './components/items.json';
 
 function Search() {
+
+    const navigate = useNavigate();
+
     const [genre, setGenre] = useState('');
     const [author, setAuthor] = useState('');
     const [type, setType] = useState('');
 
+    const [query, setQuery] = useState('');
+
+    //Filter Data;
+    const results = Items.filter((item) =>
+    item.Title.toLowerCase().includes(query.toLowerCase()) &&
+    (genre === '' || item.Genre === genre) &&
+    (author === '' || item.Author === author) &&
+    (type === '' || item.ItemTypeID === type)
+);
+
     return (
-        <div>
+       <div>
             <BorrowerNavbar />
             <div>
-                <SearchBar />
+                <SearchBar query={query} setQuery={setQuery} />
             </div>
             <div className={styles['filter-container']}>
                 <div>
@@ -57,16 +75,36 @@ function Search() {
                         onChange={(e) => setType(e.target.value)}
                     >
                         <option value="">All</option>
-                        <option value="book">Book</option>
-                        <option value="journal">Journal</option>
-                        <option value="research-paper">Research Paper</option>
-                        <option value="laptop">Laptop & MacBooks</option>
-                        <option value="equipment">Other Equipment</option>
+                        <option value="BOOK">Book</option>
+                        <option value="JOURNAL">Journal</option>
+                        <option value="RESEARCH_PAPER">Research Paper</option>
+                        <option value="ELECTRONIC_DEVICE">Electronic Device</option>
                     </select>
+                    
                 </div>
                 <div>
                 </div>
             </div>
+
+            <div className={styles['book-grid']}>
+                {results.length === 0 && <p>No items found.</p>}
+                {results.map((item) => (
+                    <section key={item.ItemID} className={styles['book-card']}>
+                        <section className={styles['book-cover']}>
+                            <p>Cover</p>
+                        </section>
+                        <div className={styles['book-placement']}>
+                            <p className={styles['book-title']}>{item.Title}</p>
+                            <p className={styles['book-title']}> {item.Description}</p>
+                            <p className={styles['book-title']}> {item.Status}</p>
+                            <p className={styles['book-title']}>by {item.Author}</p>
+                            <SelectButton onClick={() => navigate("/item-details", { state: { item } })} />
+                        </div>
+                    </section>
+                    
+                ))}
+            </div>
+            <Footer/>
         </div>
     );
 }

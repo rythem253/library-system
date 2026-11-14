@@ -1,5 +1,6 @@
 import BorrowerNavbar from "./components/BorrowerNavbar.jsx";
 import styles from "./BorrowerAccount.module.css";
+import Footer from "./components/Footer.jsx";
 
 // Placeholder data until the backend is connected
 const user = {
@@ -55,6 +56,7 @@ function BorrowerAccount() {
                 <h1 className={styles['text-design']}>Wishlist</h1>
                 <label className={styles['text-design']}>None</label>
             </section>
+            <Footer/>
         </div>
     );
 }

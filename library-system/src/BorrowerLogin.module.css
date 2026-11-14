@@ -1,6 +1,8 @@
 .layout {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
+  max-width: 300px;
+  margin: 50px auto;
   background-color: #EFEBE0;
 }
 
@@ -12,16 +14,24 @@
   gap: 4px;
 }
 
+
 .text-field {
- border-radius: .1rem;
- border: 0.05px solid black;
- vertical-align: middle;
- text-align: left;
- padding: 3px;
+  border-radius: .1rem;
+  border: 0.05px solid black;
+  vertical-align: middle;
+  text-align: left;
+  padding: 10px;
+  border-radius: 5px;
 }
 
 .label-field {
-    font-family: sans-serif;
-    font-size: medium;
-font-weight: normal;
+  font-family: sans-serif;
+  font-size: medium;
+  font-weight: normal;
+}
+
+.form-login-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }

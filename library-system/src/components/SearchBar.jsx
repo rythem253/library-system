@@ -1,12 +1,13 @@
 import styles from './SearchBar.module.css';
 
-function SearchBar() {
+function SearchBar({query, setQuery}) {
     return (
         <div>
             <div className={styles['search-bar']}>
                 <input
-                    type="search"
-                    className={styles['search-placeholder']}
+                    type="text"
+                    value={query}
+                    onChange={(e) => setQuery(e.target.value)}
                     placeholder="Search items..."
                 />
                 <button className={styles['search-btn']}>Search</button>

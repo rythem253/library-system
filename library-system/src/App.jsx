@@ -15,6 +15,8 @@ import OverdueLoans from './librarian/OverdueLoans.jsx';
 import Borrowers from './librarian/Borrowers.jsx';
 import Fines from './librarian/Fines.jsx';
 import Wishlist from './librarian/Wishlist.jsx';
+import ItemDetails from './ItemDetails.jsx';
+import Checkout from './Checkout.jsx';
 
 import './App.css';
 
@@ -22,11 +24,13 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        {/* Borrower pages */}
-        <Route path="/" element={<Home />} />
+        
         <Route path="/login" element={<BorrowerLogin />} />
+        <Route path="/" element={<Home />} />
         <Route path="/search" element={<Search />} />
         <Route path="/account" element={<BorrowerAccount />} />
+        <Route path="/item-details" element={<ItemDetails />}/>
+        <Route path="/checkout" element={<Checkout/>} />
 
         {/* Librarian pages */}
         <Route path="/librarian/login" element={<LibrarianLogin />} />

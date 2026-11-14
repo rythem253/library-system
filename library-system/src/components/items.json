@@ -163,5 +163,16 @@
         "Price": 129.0,
         "CoverURL": "/covers/raspberry-pi-5.jpg",
         "Status": "maintenance"
+    },
+    {
+        "ItemID": "I0016",
+        "ItemTypeID": "BOOK",
+        "Title": "Harry Potter",
+        "Author": "JK Rowling",
+        "Description": "A psychological thriller about a marriage and a wife's disappearance.",
+        "ISBN": "9780307588347",
+        "Price": 16.5,
+        "CoverURL": "/covers/harry-potter.jpg",
+        "Status": "borrowed"
     }
 ]
