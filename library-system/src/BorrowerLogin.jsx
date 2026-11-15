@@ -1,7 +1,7 @@
 import styles from './BorrowerLogin.module.css';
 import { useNavigate } from 'react-router-dom';
 import LoginButton from './components/LoginButton.jsx';
-import logo from './covers/logo.jpg';
+
 function BorrowerLogin() {
 
   const navigate = useNavigate();
@@ -12,7 +12,7 @@ function BorrowerLogin() {
 
   return (
     <div className={styles.layout}>
-      <img className={styles.logo} src={logo} alt="Library logo" />
+      <img className={styles.logo} src="/covers/logo.jpg" alt="Library logo" />
       <h1 className={styles.title}>Login</h1>
 
 

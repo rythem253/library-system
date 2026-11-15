@@ -3,6 +3,14 @@ import BorrowerNavbar from "./components/BorrowerNavbar.jsx";
 import styles from "./Checkout.module.css";
 import Footer from "./components/Footer.jsx";
 
+function getCover(item) {
+    if (String(item.cover_id).startsWith('/')) {
+        return item.cover_id;
+    } else {
+        return `https://covers.openlibrary.org/b/id/${item.cover_id}-M.jpg`;
+    }
+}
+
 function Checkout() {
 
     const navigate = useNavigate();
@@ -22,7 +30,8 @@ function Checkout() {
                     <div className={styles["cover"]} >
                         {item.cover_id && (
                             <img
-                                src={`https://covers.openlibrary.org/b/id/${item.cover_id}-M.jpg`}
+                                className={styles['cover']}
+                                src={getCover(item)}
                                 alt={item.Title}
                             />
                         )}

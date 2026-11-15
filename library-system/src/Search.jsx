@@ -8,14 +8,23 @@ import Footer from "./components/Footer.jsx";
 
 import Items from './components/items.json';
 
+function getCover(item) {
+    if (String(item.cover_id).startsWith('/')) {
+        return item.cover_id;
+    } else {
+        return `https://covers.openlibrary.org/b/id/${item.cover_id}-M.jpg`;
+    }
+}
+
+
 function Search() {
 
     const navigate = useNavigate();
 
     const [genre, setGenre] = useState('');
-    const [author, setAuthor] = useState('');
     const [type, setType] = useState('');
-
+    const [author, setAuthor] = useState('');
+    const authors = [...new Set(Items.map((item) => item.Author).filter(Boolean))];
     const [query, setQuery] = useState('');
 
     //Filter Data;
@@ -23,8 +32,7 @@ function Search() {
 
     const results = Items.filter((item) =>
         String(item.Title ?? '').toLowerCase().includes(q) &&
-        (genre === '' || item.Genre === genre) &&
-        (author === '' || item.Author === author) &&
+        (genre === '' || item.Genre === genre) && (author === '' || item.Author === author) &&
         (type === '' || item.ItemTypeID === type)
     );
 
@@ -62,14 +70,12 @@ function Search() {
                         onChange={(e) => setAuthor(e.target.value)}
                     >
                         <option value="">All</option>
-                        <option value="jk-rowling">JK Rowling</option>
-                        <option value="pablo-picasso">Pablo Picasso</option>
-                        <option value="agatha-christie">Agatha Christie</option>
-                        <option value="mit-open-lab">MIT Open Lab</option>
-                        <option value="zhang-lee">Zhang Lee</option>
-                        <option value="matias-jonas">Matias Jonas</option>
+                        {authors.map((a) => (
+                            <option key={a} value={a}>{a}</option>
+                        ))}
                     </select>
-                    <label htmlFor="type" className={styles['filter-lbl']}>Type</label>
+
+                    <label htmlFor="genre" className={styles['filter-lbl']}>Type</label>
                     <select
                         id="type"
                         className={styles['genre-select']}
@@ -93,18 +99,13 @@ function Search() {
                 {results.map((item) => (
                     <section key={item.ItemID} className={styles['book-card']}>
                         <section className={styles['book-cover']}>
-                            {item.cover_id && (
-                                <img
-                                    src={`https://covers.openlibrary.org/b/id/${item.cover_id}-M.jpg`}
-                                    alt={item.Title}
-                                />
-                            )}
+                            <img src={getCover(item)} alt={item.Title} />
                         </section>
                         <div className={styles['book-placement']}>
                             <p className={styles['book-title']}>{item.Title}</p>
-                            <p className={styles['book-title']}> {item.Description}</p>
-                            <p className={styles['book-title']}> {item.Status}</p>
-                            <p className={styles['book-title']}>by {item.Author}</p>
+                             <p className={styles['book-description']}>by {item.Author}</p>
+                            <p className={styles['book-description']}> {item.Description}</p>
+                            <p className={styles['book-description']}> {item.Status}</p>                       
                             <SelectButton onClick={() => navigate("/item-details", { state: { item } })} />
                         </div>
                     </section>

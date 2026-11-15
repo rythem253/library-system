@@ -3,6 +3,15 @@ import BorrowerNavbar from "./components/BorrowerNavbar.jsx";
 import styles from "./ItemDetails.module.css";
 import Footer from "./components/Footer.jsx";
 
+function getCover(item) {
+    if (String(item.cover_id).startsWith('/')) {
+        return item.cover_id;
+    } else {
+        return `https://covers.openlibrary.org/b/id/${item.cover_id}-M.jpg`;
+    }
+}
+
+
 function ItemDetails() {
     const { state } = useLocation();
     const navigate = useNavigate();
@@ -10,6 +19,10 @@ function ItemDetails() {
 
     function handleCheckout() {
         navigate("/checkout", { state: { item } });
+    }
+
+    function handleBack() {
+        navigate("/search");
     }
 
     if (!item) {
@@ -31,29 +44,31 @@ function ItemDetails() {
 
                 <div className={styles["details"]}>
                     <div className={styles["cover"]}>
-                           {item.cover_id && (
-                                <img
-                                    src={`https://covers.openlibrary.org/b/id/${item.cover_id}-M.jpg`}
-                                    alt={item.Title}
-                                />
-                            )}
+                        {item.cover_id && (
+                            <section className={styles['book-cover']}>
+                                <img src={getCover(item)} alt={item.Title} />
+                            </section>
+                        )}
                     </div>
 
                     <div className={styles["right"]}>
                         <div className={styles["info-box"]}>
                             <p>Book Title: {item.Title}</p>
                             <p>Author: {item.Author}</p>
+                            <p>Description: {item.Description}
+                            </p>
                             <p>Publisher: {item.Publisher}</p>
                             <p>Genre: {item.Genre}</p>
                             <p>
                                 Availability: {item.AvailableCopies}/{item.TotalCopies} Copies Available
                             </p>
-                            <p className={styles["description"]}>
-                                Description: {item.Description}
-                            </p>
+                        
                         </div>
                         <button className={styles["checkout-btn"]} onClick={handleCheckout}>
                             Checkout
+                        </button>
+                        <button className={styles["checkout-btn"]} onClick={handleBack}>
+                            Back
                         </button>
                     </div>
                 </div>

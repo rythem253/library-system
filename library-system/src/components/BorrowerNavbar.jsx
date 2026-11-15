@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import styles from './BorrowerNavbar.module.css';
-import logo from '../covers/logo.jpg';
 
 function BorrowerNavbar() {
     const navigate = useNavigate();
@@ -17,7 +16,7 @@ function BorrowerNavbar() {
 
     return (
         <nav className={styles['navbar']}>
-            <img className={styles['logo']} src={logo} alt="Library logo" />
+            <img className={styles['logo']} src="/covers/logo.jpg" alt="logo" />
 
             <button
                 className={styles['menu-btn']}
