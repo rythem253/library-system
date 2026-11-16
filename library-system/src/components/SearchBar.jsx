@@ -4,7 +4,7 @@ function SearchBar({query, setQuery}) {
     return (
         <div>
             <div className={styles['search-bar']}>
-                <input
+                <input  className={styles['search-input']}
                     type="text"
                     value={query}
                     onChange={(e) => setQuery(e.target.value)}

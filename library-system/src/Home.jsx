@@ -61,7 +61,7 @@ function Home() {
                             <div className={styles['book-info']}>
                                 <p className={styles['book-title']}>{book.title}</p>
                                 <p>{book.author_name?.join(", ")}</p>
-                                <button onClick={handleView}>Checkout</button>
+                                <button className={styles['select-button']} onClick={handleView}>Select</button>
                             </div>
                         </li>
                     ))}

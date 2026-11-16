@@ -36,10 +36,12 @@ function Search() {
         (type === '' || item.ItemTypeID === type)
     );
 
+    
+
     return (
         <div>
             <BorrowerNavbar />
-            <div>
+            <div className={styles['search-bar']}>
                 <SearchBar query={query} setQuery={setQuery} />
             </div>
             <div className={styles['filter-container']}>

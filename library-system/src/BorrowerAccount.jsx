@@ -1,8 +1,7 @@
 import BorrowerNavbar from "./components/BorrowerNavbar.jsx";
+import { useLocation } from "react-router-dom";
 import styles from "./BorrowerAccount.module.css";
 import Footer from "./components/Footer.jsx";
-import Items from './components/items.json';
-
 
 // Placeholder data until the backend is connected
 const user = {
@@ -11,16 +10,13 @@ const user = {
     phone: "111-111-1111",
 };
 
-const checkedOut = [
-    { id: 1, title: "The Golden Key", due: "2026/12/24" },
-    { id: 2, title: "The Alchemist", due: "2026/12/28" },
-];
-
 const fines = [];
 const wishlist = [];
 
 function BorrowerAccount() {
 
+    const { state } = useLocation();
+    const item = state?.item;
 
     return (
         <div>
@@ -37,16 +33,17 @@ function BorrowerAccount() {
 
             <section className={styles['user-info']}>
                 <h1 className={styles['text-design']}>Checked Out</h1>
-                {checkedOut.map((book) => (
-                    <div className={styles['flex-direction']}><label key={book.id} className={styles['text-design']}>
-                        {book.title}: Due {book.due}
-                    </label>
+                {item ? (
+                    <div className={styles['flex-direction']}>
+                        <label className={styles['text-design']}>{item.Title}</label>
                         <div>
                             <button className={styles['button']}>Renew</button>
                             <button className={styles['button']}>Return</button>
                         </div>
                     </div>
-                ))}
+                ) : (
+                    <label className={styles['text-design']}>None</label>
+                )}
             </section>
 
             <section className={styles['user-info']}>
@@ -58,7 +55,7 @@ function BorrowerAccount() {
                 <h1 className={styles['text-design']}>Wishlist</h1>
                 <label className={styles['text-design']}>None</label>
             </section>
-            <Footer/>
+            <Footer />
         </div>
     );
 }

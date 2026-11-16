@@ -10,7 +10,9 @@
         "Price": 18.99,
         "cover_id": "11481354",
         "Status": "available",
-        "Genre": "science-fiction"
+        "Genre": "science-fiction",
+        "AvailableCopies": 9,
+        "TotalCopies": 10
     },
     {
         "ItemID": "I002",
@@ -23,7 +25,9 @@
         "Price": 16.5,
         "cover_id": "8368314",
         "Status": "borrowed",
-        "Genre": "mystery"
+        "Genre": "mystery",
+        "AvailableCopies": 0,
+        "TotalCopies": 3
     },
     {
         "ItemID": "I003",
@@ -36,7 +40,9 @@
         "Price": 14.99,
         "cover_id": "14627509",
         "Status": "available",
-        "Genre": "fantasy"
+        "Genre": "fantasy",
+        "AvailableCopies": 4,
+        "TotalCopies": 5
     },
     {
         "ItemID": "I004",
@@ -49,7 +55,9 @@
         "Price": 17.0,
         "cover_id": "8314077",
         "Status": "reserved",
-        "Genre": "non-fiction"
+        "Genre": "non-fiction",
+        "AvailableCopies": 0,
+        "TotalCopies": 2
     },
     {
         "ItemID": "I005",
@@ -62,7 +70,9 @@
         "Price": 44.99,
         "cover_id": "8065615",
         "Status": "available",
-        "Genre": "technology"
+        "Genre": "technology",
+        "AvailableCopies": 3,
+        "TotalCopies": 4
     },
     {
         "ItemID": "I006",
@@ -75,7 +85,9 @@
         "Price": 12.0,
         "cover_id": "/covers/research-papper.png",
         "Status": "available",
-        "Genre": "technology"
+        "Genre": "technology",
+        "AvailableCopies": 1,
+        "TotalCopies": 2
     },
     {
         "ItemID": "I007",
@@ -88,7 +100,9 @@
         "Price": 15.0,
         "cover_id": "/covers/research-papper.png",
         "Status": "borrowed",
-        "Genre": "non-fiction"
+        "Genre": "non-fiction",
+        "AvailableCopies": 0,
+        "TotalCopies": 1
     },
     {
         "ItemID": "I008",
@@ -101,7 +115,9 @@
         "Price": 10.0,
         "cover_id": "/covers/research-papper.png",
         "Status": "available",
-        "Genre": "technology"
+        "Genre": "technology",
+        "AvailableCopies": 2,
+        "TotalCopies": 3
     },
     {
         "ItemID": "I009",
@@ -114,7 +130,9 @@
         "Price": 0.0,
         "cover_id": "/covers/research-papper.png",
         "Status": "available",
-        "Genre": "technology"
+        "Genre": "technology",
+        "AvailableCopies": 3,
+        "TotalCopies": 3
     },
     {
         "ItemID": "I010",
@@ -127,7 +145,9 @@
         "Price": 0.0,
         "cover_id": "/covers/research-papper.png",
         "Status": "available",
-        "Genre": "technology"
+        "Genre": "technology",
+        "AvailableCopies": 3,
+        "TotalCopies": 3
     },
     {
         "ItemID": "I011",
@@ -140,7 +160,9 @@
         "Price": 0.0,
         "cover_id": "/covers/research-papper.png",
         "Status": "reserved",
-        "Genre": "non-fiction"
+        "Genre": "non-fiction",
+        "AvailableCopies": 0,
+        "TotalCopies": 1
     },
     {
         "ItemID": "I012",
@@ -153,7 +175,9 @@
         "Price": 1299.0,
         "cover_id": "/covers/laptop.jpg",
         "Status": "available",
-        "Genre": "technology"
+        "Genre": "technology",
+        "AvailableCopies": 9,
+        "TotalCopies": 10
     },
     {
         "ItemID": "I013",
@@ -166,7 +190,9 @@
         "Price": 749.0,
         "cover_id": "/covers/laptop.jpg",
         "Status": "borrowed",
-        "Genre": "technology"
+        "Genre": "technology",
+        "AvailableCopies": 0,
+        "TotalCopies": 5
     },
     {
         "ItemID": "I014",
@@ -179,7 +205,9 @@
         "Price": 899.0,
         "cover_id": "/covers/laptop.jpg",
         "Status": "available",
-        "Genre": "technology"
+        "Genre": "technology",
+        "AvailableCopies": 2,
+        "TotalCopies": 3
     },
     {
         "ItemID": "I015",
@@ -192,7 +220,9 @@
         "Price": 129.0,
         "cover_id": "/covers/laptop.jpg",
         "Status": "maintenance",
-        "Genre": "technology"
+        "Genre": "technology",
+        "AvailableCopies": 0,
+        "TotalCopies": 2
     },
     {
         "ItemID": "I0016",
@@ -205,6 +235,8 @@
         "Price": 16.5,
         "cover_id": "15155833",
         "Status": "borrowed",
-        "Genre": "fantasy"
+        "Genre": "fantasy",
+        "AvailableCopies": 0,
+        "TotalCopies": 6
     }
 ]
