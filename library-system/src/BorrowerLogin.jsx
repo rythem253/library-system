@@ -7,7 +7,7 @@ function BorrowerLogin() {
   const navigate = useNavigate();
 
   const handleLogin = () => {
-    navigate('/');
+    navigate('/home');
   };
 
   return (

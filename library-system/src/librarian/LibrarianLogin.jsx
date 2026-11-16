@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import styles from './Librarian.module.css';
 
 function LibrarianLogin() {
@@ -48,6 +48,7 @@ function LibrarianLogin() {
 
         <button type="submit" className={styles.btnPrimary}>LOGIN</button>
         <p className={styles.hint}>Demo: any username and password will work.</p>
+        <Link to="/" className={styles.backLink}>← Back to start</Link>
       </form>
     </div>
   );

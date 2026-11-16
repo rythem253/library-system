@@ -1,3 +1,4 @@
+import Welcome from './Welcome.jsx';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import BorrowerLogin from './BorrowerLogin.jsx';
 import Home from './Home.jsx';
@@ -26,7 +27,8 @@ function App() {
       <Routes>
         
         <Route path="/login" element={<BorrowerLogin />} />
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Welcome />} />
+        <Route path="/home" element={<Home />} />
         <Route path="/search" element={<Search />} />
         <Route path="/account" element={<BorrowerAccount />} />
         <Route path="/item-details" element={<ItemDetails />}/>

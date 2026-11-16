@@ -27,7 +27,7 @@ function BorrowerNavbar() {
             </button>
 
             <ul className={`${styles['nav-links']} ${menuOpen ? styles['open'] : ''}`}>
-                <li className={styles['nav-ind-link']}><Link to="/" onClick={closeMenu}>Home</Link></li>
+                <li className={styles['nav-ind-link']}><Link to="/home" onClick={closeMenu}>Home</Link></li>
                 <li className={styles['nav-ind-link']}><Link to="/search" onClick={closeMenu}>Borrow & Search</Link></li>
                 <li className={styles['nav-ind-link']}><Link to="/account" onClick={closeMenu}>Account</Link></li>
                 <button className={styles['logout-btn']} onClick={handleLogout}>Logout</button>
