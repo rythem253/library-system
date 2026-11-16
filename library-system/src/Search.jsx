@@ -21,9 +21,9 @@ function Search() {
 
     const navigate = useNavigate();
 
-    const [genre, setGenre] = useState('');
     const [type, setType] = useState('');
     const [author, setAuthor] = useState('');
+    const [wishAuthor, setWishAuthor] = useState('');
     const authors = [...new Set(Items.map((item) => item.Author).filter(Boolean))];
     const [query, setQuery] = useState('');
 
@@ -32,11 +32,11 @@ function Search() {
 
     const results = Items.filter((item) =>
         String(item.Title ?? '').toLowerCase().includes(q) &&
-        (genre === '' || item.Genre === genre) && (author === '' || item.Author === author) &&
+        (author === '' || item.Author === author) &&
         (type === '' || item.ItemTypeID === type)
     );
 
-    
+
 
     return (
         <div>
@@ -49,21 +49,6 @@ function Search() {
                     <label className={styles['filter-lbl']}>Filter</label>
                 </div>
                 <div>
-                    <label htmlFor="genre" className={styles['filter-lbl']}>Genre</label>
-                    <select
-                        id="genre"
-                        className={styles['genre-select']}
-                        value={genre}
-                        onChange={(e) => setGenre(e.target.value)}
-                    >
-                        <option value="">All</option>
-                        <option value="fiction">Fiction</option>
-                        <option value="non-fiction">Non-Fiction</option>
-                        <option value="mystery">Mystery</option>
-                        <option value="science-fiction">Science Fiction</option>
-                        <option value="fantasy">Fantasy</option>
-                        <option value="technology">Technology</option>
-                    </select>
                     <label htmlFor="author" className={styles['filter-lbl']}>Author</label>
                     <select
                         id="author"
@@ -77,7 +62,7 @@ function Search() {
                         ))}
                     </select>
 
-                    <label htmlFor="genre" className={styles['filter-lbl']}>Type</label>
+                    <label htmlFor="type" className={styles['filter-lbl']}>Type</label>
                     <select
                         id="type"
                         className={styles['genre-select']}
@@ -97,7 +82,30 @@ function Search() {
             </div>
 
             <div className={styles['book-grid']}>
-                {results.length === 0 && <p>No items found.</p>}
+                {results.length === 0 && (
+                    <div>
+                        <p>No items found. Request "{query}"?</p>
+                        <input
+                            placeholder="Author (optional)"
+                            value={wishAuthor}
+                            onChange={(e) => setWishAuthor(e.target.value)}
+                        />
+                        <button
+                            onClick={() => navigate("/account", {
+                                state: {
+                                    newWishlist: {
+                                        wishlistId: `new-${Date.now()}`,
+                                        title: query,
+                                        author: wishAuthor,
+                                        status: "Pending",
+                                    },
+                                },
+                            })}
+                        >
+                            Add to wishlist
+                        </button>
+                    </div>
+                )}
                 {results.map((item) => (
                     <section key={item.ItemID} className={styles['book-card']}>
                         <section className={styles['book-cover']}>
@@ -105,9 +113,9 @@ function Search() {
                         </section>
                         <div className={styles['book-placement']}>
                             <p className={styles['book-title']}>{item.Title}</p>
-                             <p className={styles['book-description']}>by {item.Author}</p>
+                            <p className={styles['book-description']}>by {item.Author}</p>
                             <p className={styles['book-description']}> {item.Description}</p>
-                            <p className={styles['book-description']}> {item.Status}</p>                       
+                            <p className={styles['book-description']}> {item.Status}</p>
                             <SelectButton onClick={() => navigate("/item-details", { state: { item } })} />
                         </div>
                     </section>
