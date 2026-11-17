@@ -53,6 +53,7 @@ function Checkout() {
                         <p>{item.Author}</p>
                         <p>Borrowed: {today.toLocaleDateString()}</p>
                         <p>Due: {nextWeek.toLocaleDateString()}</p>
+                        
                     </section>
                     <button className={styles["button"]} onClick={handleCheckout}>Checkout</button>
                     <button className={styles["button-cancel"]} onClick={handleCancel}>Cancel</button>

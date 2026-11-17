@@ -21,6 +21,18 @@ function ItemDetails() {
         navigate("/checkout", { state: { item } });
     }
 
+    function handleHold() {
+        navigate("/account", {
+            state: {
+                newHold: {
+                    holdId: `new-${Date.now()}`,
+                    title: item.Title,
+                    holdDate: new Date().toISOString().slice(0, 10),
+                    status: "Waiting",
+                },
+            },
+        });
+    }
     function handleBack() {
         navigate("/search");
     }
@@ -62,11 +74,17 @@ function ItemDetails() {
                             <p>
                                 Availability: {item.AvailableCopies}/{item.TotalCopies} Copies Available
                             </p>
-                        
+
                         </div>
-                        <button className={styles["checkout-btn"]} onClick={handleCheckout}>
-                            Checkout
-                        </button>
+                        {item.AvailableCopies > 0 ? (
+                            <button className={styles["checkout-btn"]} onClick={handleCheckout}>
+                                Checkout
+                            </button>
+                        ) : (
+                            <button className={styles["checkout-btn"]} onClick={handleHold}>
+                                Place Hold
+                            </button>
+                        )}
                         <button className={styles["checkout-btn"]} onClick={handleBack}>
                             Back
                         </button>

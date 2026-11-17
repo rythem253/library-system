@@ -11,8 +11,9 @@
         "cover_id": "11481354",
         "Status": "available",
         "Genre": "science-fiction",
-        "AvailableCopies": 9,
-        "TotalCopies": 10
+        "AvailableCopies": 0,
+        "TotalCopies": 10,
+        "LoanPeriodDays": 30
     },
     {
         "ItemID": "I002",
@@ -27,7 +28,8 @@
         "Status": "borrowed",
         "Genre": "mystery",
         "AvailableCopies": 0,
-        "TotalCopies": 3
+        "TotalCopies": 3,
+        "LoanPeriodDays": 30
     },
     {
         "ItemID": "I003",
@@ -42,7 +44,8 @@
         "Status": "available",
         "Genre": "fantasy",
         "AvailableCopies": 4,
-        "TotalCopies": 5
+        "TotalCopies": 5,
+        "LoanPeriodDays": 30
     },
     {
         "ItemID": "I004",
@@ -57,7 +60,8 @@
         "Status": "reserved",
         "Genre": "non-fiction",
         "AvailableCopies": 0,
-        "TotalCopies": 2
+        "TotalCopies": 2,
+        "LoanPeriodDays": 30
     },
     {
         "ItemID": "I005",
@@ -72,7 +76,8 @@
         "Status": "available",
         "Genre": "technology",
         "AvailableCopies": 3,
-        "TotalCopies": 4
+        "TotalCopies": 4,
+        "LoanPeriodDays": 30
     },
     {
         "ItemID": "I006",
@@ -87,7 +92,8 @@
         "Status": "available",
         "Genre": "technology",
         "AvailableCopies": 1,
-        "TotalCopies": 2
+        "TotalCopies": 2,
+        "LoanPeriodDays": 7
     },
     {
         "ItemID": "I007",
@@ -102,7 +108,8 @@
         "Status": "borrowed",
         "Genre": "non-fiction",
         "AvailableCopies": 0,
-        "TotalCopies": 1
+        "TotalCopies": 1,
+        "LoanPeriodDays": 7
     },
     {
         "ItemID": "I008",
@@ -117,7 +124,8 @@
         "Status": "available",
         "Genre": "technology",
         "AvailableCopies": 2,
-        "TotalCopies": 3
+        "TotalCopies": 3,
+        "LoanPeriodDays": 7
     },
     {
         "ItemID": "I009",
@@ -132,7 +140,8 @@
         "Status": "available",
         "Genre": "technology",
         "AvailableCopies": 3,
-        "TotalCopies": 3
+        "TotalCopies": 3,
+        "LoanPeriodDays": 7
     },
     {
         "ItemID": "I010",
@@ -147,7 +156,8 @@
         "Status": "available",
         "Genre": "technology",
         "AvailableCopies": 3,
-        "TotalCopies": 3
+        "TotalCopies": 3,
+        "LoanPeriodDays": 7
     },
     {
         "ItemID": "I011",
@@ -162,7 +172,8 @@
         "Status": "reserved",
         "Genre": "non-fiction",
         "AvailableCopies": 0,
-        "TotalCopies": 1
+        "TotalCopies": 1,
+        "LoanPeriodDays": 7
     },
     {
         "ItemID": "I012",
@@ -177,7 +188,8 @@
         "Status": "available",
         "Genre": "technology",
         "AvailableCopies": 9,
-        "TotalCopies": 10
+        "TotalCopies": 10,
+        "LoanPeriodDays": 14
     },
     {
         "ItemID": "I013",
@@ -192,7 +204,8 @@
         "Status": "borrowed",
         "Genre": "technology",
         "AvailableCopies": 0,
-        "TotalCopies": 5
+        "TotalCopies": 5,
+        "LoanPeriodDays": 14
     },
     {
         "ItemID": "I014",
@@ -207,7 +220,8 @@
         "Status": "available",
         "Genre": "technology",
         "AvailableCopies": 2,
-        "TotalCopies": 3
+        "TotalCopies": 3,
+        "LoanPeriodDays": 14
     },
     {
         "ItemID": "I015",
@@ -222,7 +236,8 @@
         "Status": "maintenance",
         "Genre": "technology",
         "AvailableCopies": 0,
-        "TotalCopies": 2
+        "TotalCopies": 2,
+        "LoanPeriodDays": 14
     },
     {
         "ItemID": "I0016",
@@ -237,6 +252,7 @@
         "Status": "borrowed",
         "Genre": "fantasy",
         "AvailableCopies": 0,
-        "TotalCopies": 6
+        "TotalCopies": 6,
+        "LoanPeriodDays": 30
     }
 ]

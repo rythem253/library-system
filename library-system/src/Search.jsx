@@ -26,9 +26,10 @@ function Search() {
     const [wishAuthor, setWishAuthor] = useState('');
     const authors = [...new Set(Items.map((item) => item.Author).filter(Boolean))];
     const [query, setQuery] = useState('');
+    const [searchTerm, setSearchTerm] = useState('');
 
     //Filter Data;
-    const q = String(query ?? '').toLowerCase();
+    const q = String(searchTerm ?? '').toLowerCase();
 
     const results = Items.filter((item) =>
         String(item.Title ?? '').toLowerCase().includes(q) &&
@@ -42,7 +43,7 @@ function Search() {
         <div>
             <BorrowerNavbar />
             <div className={styles['search-bar']}>
-                <SearchBar query={query} setQuery={setQuery} />
+                <SearchBar query={query} setQuery={setQuery} onSearch={() => setSearchTerm(query)} />
             </div>
             <div className={styles['filter-container']}>
                 <div>
@@ -83,20 +84,20 @@ function Search() {
 
             <div className={styles['book-grid']}>
                 {results.length === 0 && (
-                    <div>
-                        <p>No items found. Request "{query}"?</p>
-                        <input
-                            placeholder="Author (optional)"
+                    <div className={styles['wishlist']}>
+                        <p>No items found. Request "{searchTerm}"</p>
+                        <p>You can add an unavailabe item to wishlist</p>
+                        <input className={styles['wish-input']}
+                            placeholder="Item wanted"
                             value={wishAuthor}
                             onChange={(e) => setWishAuthor(e.target.value)}
                         />
-                        <button
+                        <button className={styles['wish-button']}
                             onClick={() => navigate("/account", {
                                 state: {
                                     newWishlist: {
                                         wishlistId: `new-${Date.now()}`,
-                                        title: query,
-                                        author: wishAuthor,
+                                        title: wishAuthor,
                                         status: "Pending",
                                     },
                                 },

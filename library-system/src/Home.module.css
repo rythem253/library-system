@@ -2,8 +2,8 @@
     list-style: none;
     padding: 0;
     margin: 20px;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 1rem;
 }
 
