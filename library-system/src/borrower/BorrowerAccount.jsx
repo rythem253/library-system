@@ -3,7 +3,7 @@ import { useLocation } from "react-router-dom";
 import BorrowerNavbar from "./components/BorrowerNavbar.jsx";
 import styles from "./BorrowerAccount.module.css";
 import Footer from "./components/Footer.jsx";
-import { borrowers, items, wishlist, loans } from "./data/mockData.js";
+import { borrowers, items, wishlist, loans } from "../data/mockData.js";
 
 function BorrowerAccount() {
 
@@ -51,6 +51,10 @@ function BorrowerAccount() {
                 {item && item.ItemID !== hobbit.itemId && (
                     <div className={styles['flex-direction']}>
                         <label className={styles['text-design']}>{item.Title ?? item.title}</label>
+                        <label className={styles['text-design']}>
+                            {/* //Fixing why i had 1 day extra */}
+                               Due: {new Date(Date.now() + (item.LoanPeriodDays ?? 7) * 24 * 60 * 60 * 1000).toLocaleDateString('en-CA')}
+                        </label>
                         <div>
                             <button className={styles['button']}>Renew</button>
                             <button className={styles['button']}>Return</button>

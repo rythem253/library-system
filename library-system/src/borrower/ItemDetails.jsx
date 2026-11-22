@@ -74,6 +74,7 @@ function ItemDetails() {
                             <p>
                                 Availability: {item.AvailableCopies}/{item.TotalCopies} Copies Available
                             </p>
+                            <p>Loan Period: {item.LoanPeriodDays} Days</p>
 
                         </div>
                         {item.AvailableCopies > 0 ? (

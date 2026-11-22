@@ -1,9 +1,9 @@
 import Welcome from './Welcome.jsx';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
-import BorrowerLogin from './BorrowerLogin.jsx';
-import Home from './Home.jsx';
-import Search from './Search.jsx';
-import BorrowerAccount from './BorrowerAccount.jsx';
+import BorrowerLogin from './borrower/BorrowerLogin.jsx';
+import Home from './borrower/Home.jsx';
+import Search from './borrower/Search.jsx';
+import BorrowerAccount from './borrower/BorrowerAccount.jsx';
 
 // Librarian pages
 import LibrarianLogin from './librarian/LibrarianLogin.jsx';
@@ -16,8 +16,8 @@ import OverdueLoans from './librarian/OverdueLoans.jsx';
 import Borrowers from './librarian/Borrowers.jsx';
 import Fines from './librarian/Fines.jsx';
 import Wishlist from './librarian/Wishlist.jsx';
-import ItemDetails from './ItemDetails.jsx';
-import Checkout from './Checkout.jsx';
+import ItemDetails from './borrower/ItemDetails.jsx';
+import Checkout from './borrower/Checkout.jsx';
 
 import './App.css';
 
