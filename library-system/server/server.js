@@ -13,6 +13,11 @@ const { watch } = require("fs");
 const app = express();
 const PORT = 3001;
 
+
+
+app.listen(PORT, () => {
+    console.log(`Server running on http://localhost:${PORT}`);
+});
 // express.json() lets the server read JSON request bodies. 
 // Without this middleware, req.body will usually be undefined. 
 app.use(express.json());
@@ -25,3 +30,32 @@ app.use(
         credentials: true,
     })
 );
+
+async function findUser(username) {
+
+}
+
+app.post("/api/login", async (req, res) => {
+
+    try {
+        const { username, password } = req.body;
+
+        if (!username || !password) {
+            return res.status(400).json({ message: "Username and password are required." });
+        }
+
+        //check if user exist in DB
+        
+
+        //Compare password
+
+        //if all good then send res.ok
+        //temp
+        res.json({ message: "Login successful.", username });
+
+    } catch (error) {
+        res.status(500).json({ message: "Server error during login" });
+    }
+
+
+});
